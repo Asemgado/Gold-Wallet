@@ -19,11 +19,11 @@ Session(app)
 def get_db_connection():
     try:
         connection = connect(
-            host="db-wallet-asmblxer.g.aivencloud.com",
-            port=18977,
-            user="avnadmin",
-            password="AVNS_IxwKaxHEba4YTBjiCfV",
-            database="defaultdb"
+            host="",
+            port=,
+            user="",
+            password="",
+            database=""
         )
         return connection
     except Error as e:
