@@ -16,19 +16,7 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 # Configure MySQL database
-# def get_db_connection():
-#     try:
-#         connection = connect(
-#             host="db-wallet-asmblxer.g.aivencloud.com",
-#             port=18977,
-#             user="avnadmin",
-#             password="AVNS_IxwKaxHEba4YTBjiCfV",
-#             database="defaultdb"
-#         )
-#         return connection
-#     except Error as e:
-#         print("Error while connecting to MySQL", e)
-#         exit(1)
+
 
 def init_db():
     connection = get_db_connection()
