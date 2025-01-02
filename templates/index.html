@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    My Gold Wallet 
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Karat</th>
+                <th class="text-start">Price</th>
+                <th class="text-start">Weight</th>
+                <th class="text-start">Total</th>
+                <th class="text-start">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+            <tr>
+                <td class="text-start">{{ transaction.karat }}</td>
+                <td class="text-start">{{ transaction.price }}</td>
+                <td class="text-start">{{ transaction.weight }}</td>
+                <td class="text-start">{{ transaction.total }}</td>
+                <td class="text-start">
+                    <form action="/sell" method="post">
+                        <input type="hidden" name="id" value="{{ transaction.id }}">
+                        <button type="submit" class="btn btn-danger">Sell</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Buy
+{% endblock %}
+{% block main %}
+    <form action="/buy" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="karat" name="karat" placeholder="Karat" type="number">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="weight" name="weight" placeholder="Weight" type="number">
+            <button class="btn btn-primary" type="submit">Buy</button>
+        </div>
+    </form>
+{% endblock %}
+
